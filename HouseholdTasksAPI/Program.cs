@@ -47,7 +47,7 @@ namespace HouseholdTasksAPI
                 // 2. Es liest deinen "Migrations"-Ordner und legt alle Tabellen an.
                 db.Database.Migrate();
             }
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
             app.UseCors("AllowBlazorClient");
             app.UseAuthorization();
             app.MapHub<TaskHub>("/task");
