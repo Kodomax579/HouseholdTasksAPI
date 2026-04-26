@@ -42,7 +42,15 @@ namespace HouseholdTasksAPI
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            using (var scope = app.Services.CreateScope())
+            {
+                var db = scope.ServiceProvider.GetRequiredService<HouseholdTasksAPI.Database.Context>();
 
+                // Migrate() macht zwei Dinge:
+                // 1. Es erstellt die household.db Datei, falls sie nicht existiert.
+                // 2. Es liest deinen "Migrations"-Ordner und legt alle Tabellen an.
+                db.Database.Migrate();
+            }
             app.UseHttpsRedirection();
             app.UseCors("AllowBlazorClient");
             app.UseAuthorization();
