@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  household-api:
+    build: .
+    container_name: household_api_container
+    restart: always # Startet die API automatisch neu, wenn der Server bootet
+    ports:
+      - "5000:8080" # Leitet Port 5000 des Linux-Servers auf Port 8080 im Container weiter
+    volumes:
+      - ./data:/app/data # GANZ WICHTIG: Speichert die SQLite DB auf dem Linux-Server im Ordner "data"
+    environment:
+      # Hier überschreiben wir den Pfad zur Datenbank, damit sie im Volume liegt
+      - ConnectionStrings__DefaultConnection=Data Source=/app/data/household.db

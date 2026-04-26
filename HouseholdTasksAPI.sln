@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36811.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseholdTasksAPI", "HouseholdTasksAPI\HouseholdTasksAPI.csproj", "{1C16C6E3-771B-48E5-A86E-AC249D556736}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C16C6E3-771B-48E5-A86E-AC249D556736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C16C6E3-771B-48E5-A86E-AC249D556736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C16C6E3-771B-48E5-A86E-AC249D556736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C16C6E3-771B-48E5-A86E-AC249D556736}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4A7E46D-62D6-4A9D-ABC6-CCB3C0F4DE45}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+@HouseholdTasksAPI_HostAddress = http://localhost:5136
+
+GET {{HouseholdTasksAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
