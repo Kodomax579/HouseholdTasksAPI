@@ -58,7 +58,7 @@ namespace HouseholdTasksAPI.Controllers
                 task.IsCompleted = !task.IsCompleted;
                 await _context.SaveChangesAsync();
 
-                await _hubContext.Clients.All.SendAsync("TaskCompleted", id);
+                await _hubContext.Clients.All.SendAsync("TaskCompleted", task);
 
                 return NoContent();
 
