@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HouseholdTasksAPI.Database.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20260426182920_InitialCreate")]
+    [Migration("20260427145422_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -59,13 +59,13 @@ namespace HouseholdTasksAPI.Database.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
 
-                    b.Property<TimeSpan>("EndTime")
+                    b.Property<TimeOnly>("EndTime")
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsCompleted")
                         .HasColumnType("INTEGER");
 
-                    b.Property<TimeSpan>("StartTime")
+                    b.Property<TimeOnly>("StartTime")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Title")
