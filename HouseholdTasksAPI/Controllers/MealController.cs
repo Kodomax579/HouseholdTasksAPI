@@ -57,7 +57,7 @@ namespace HouseholdTasksAPI.Controllers
                 meal.IsActiv = !meal.IsActiv;
                 await _context.SaveChangesAsync();
 
-                await _hubContext.Clients.All.SendAsync("ActivateMealSuggestionComplete", id);
+                await _hubContext.Clients.All.SendAsync("ActivateMealSuggestionComplete", meal);
 
                 return NoContent();
 
